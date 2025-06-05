@@ -100,8 +100,12 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Project Title 1</h3>
-      <p>Description of the project, goals, methodology, and results. <a href="#">[Link]</a></p>
+      <h3>Commercial-Grade DRL for Optimal Trade Execution</h3>
+      <p>Led the end-to-end development and deployment of a deep reinforcement learning (DRL)-based trade execution engine for the Korean equity market. Starting from scratch, we first evaluated multiple DRL candidates (DQN, Dueling DQN, PPO variants) in simulation environments to assess convergence and stability. Built a custom simulator leveraging Level 3 order book data to accurately model queue priority and real-time execution feedback. Designed a detailed reward framework centered around VWAP outperformance, with distinct rewards for new, modified, and pending orders. Final models—PPO with discrete and hybrid action spaces and LSTM encoders—were trained across 50 high-volume stocks with variable time horizons (165–380 minutes) and dynamic target volumes.
+      <br><br>
+      Rigorous validation on out-of-sample data (12,300 simulated jobs) showed >3bps average VWAP outperformance and >51% win rate. Real-market replication across 4,000+ live jobs confirmed correlation with simulation, leading to successful commercialization. The model was deployed to institutional OMS pipelines, automating order flow for top financial institutions in Korea and Taiwan.
+      <br><br>
+      <a href="https://doi.org/10.3390/fintech2030023" target="_blank">Read the publication</a></p>
     </div>
     <div class="project">
       <h3>Project Title 2</h3>
