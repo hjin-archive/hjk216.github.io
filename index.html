@@ -106,8 +106,14 @@
       Rigorous validation on out-of-sample data (12,300 simulated jobs) showed >3bps average VWAP outperformance and >51% win rate. Real-market replication across 4,000+ live jobs confirmed correlation with simulation, leading to successful commercialization. The model was deployed to institutional OMS pipelines, automating order flow for top financial institutions in Korea and Taiwan.
     </div>
     <div class="project">
-      <h3>Project Title 2</h3>
-      <p>Description of the project, goals, methodology, and results. <a href="#">[Link]</a></p>
+      <h3>Transformer-Based Forecasting of Limit Order Book Dynamics</h3>
+      <p>Initiated as an extension of DeepLOB (Zhang et al., 2018), this project explored attention-based models for predicting directional price movements from Level 3 limit order book (LOB) data in a mid-frequency trading context. We approached the problem as a **classification task**, labeling whether the mid-price would move up or down beyond a defined threshold over short horizons.
+      <br><br>
+      While CNNs and LSTMs served as useful baselines, their limitations in capturing long-range dependencies and spatio-temporal interactions led us to experiment with Transformer variants including Informer, Reformer, Autoformer, and Crossformer. We ultimately adopted a **PatchTransformer architecture**, inspired by PatchTST, which tokenizes sequences into temporal patches to better capture structural LOB dynamics.
+      <br><br>
+      The strategy focused on trading the **SPY ETF**, chosen for its liquidity and stability—qualities that reduce idiosyncratic noise present in single stocks and improve model generalization. Feature engineering on raw Level 3 data yielded over 800 features, including queue imbalances, volume shifts, and microstructure-based signals. Threshold-based labeling was tuned to balance signal strength and trading frequency.
+      <br><br>
+      The entire system—from **EDA and model training (in Python)** to deployment in a **C++-based automated trading framework via Interactive Brokers API**—was built internally by our team. The final model served as a core component of a real-time alpha signal engine for directional SPY trades, validated with time-aware CV and live testing.</p>
     </div>
   </section>
 
